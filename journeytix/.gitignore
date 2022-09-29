@@ -1,0 +1,12 @@
+*.DS_Store
+*/logs/*
+*/tmp
+*/dcenv
+*env
+db.ini
+*db.ini
+*/tmp
+*__pycache__
+
+# Frontend
+dialogflow_voicebot/frontend/node_modules/
