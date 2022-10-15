@@ -1,6 +1,7 @@
 import sys
 sys.path.insert(0, './journeytix/app')
 from ticket import Ticket
+from search import Search
 
 from typing import Optional
 from fastapi import FastAPI, Request
@@ -16,7 +17,7 @@ class JourneyRequest(BaseModel):
     returndate: Optional[str] = None
     source: Optional[str] = None
 
-@app.post("/")
+@app.post("/ticket")
 def generate_ticket(journeyrequest: JourneyRequest):
     """
     """
@@ -30,6 +31,12 @@ def generate_ticket(journeyrequest: JourneyRequest):
     ticket = Ticket(origin, destination, onwarddate, source, "")
     resp = ticket.generate_ticket()
     return JSONResponse(content=resp)
+
+@app.get("/search/")
+async def read_item(search_term: str = ""):
+    search = Search(search_term)
+    search_resp = search.search_airport()
+    return search_resp
 
 @app.get("/")
 async def root():
