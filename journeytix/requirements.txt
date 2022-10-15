@@ -1,10 +1,8 @@
-google-cloud-firestore
 fastapi
 pydantic
 typing
-dialogflow
 gunicorn
-uvicorn==0.11.8
-google.cloud
-google-cloud-pubsub
-google-cloud
+uvicorn
+lxml
+requests
+beautifulsoup4

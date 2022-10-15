@@ -1,0 +1,31 @@
+{
+    "Request": {
+        "flightShopRequest": {
+            "tripLegs": [
+                {
+                    "source": {
+                        "code": ""
+                    },
+                    "destination": {
+                        "code": ""
+                    },
+                    "departureDate": ""
+                }
+            ],
+            "classOfService": "Economy",
+            "passengerList": [
+                {
+                    "passengerType": "Adult",
+                    "actualCount": 1,
+                    "maxCount": 10
+                }
+            ],
+            "tripType": "OneWay",
+            "isDefaultRequest": true,
+            "recommendationRequest": false,
+            "pollCount": "0"
+        },
+        "originPlaceType": "Airport",
+        "destinationPlaceType": "Airport"
+    }
+}
